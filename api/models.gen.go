@@ -24,3 +24,9 @@ type ListUsersParams struct {
 	// page
 	Page int32 `form:"page" json:"page"`
 }
+
+// CreateUsersJSONBody defines parameters for CreateUsers.
+type CreateUsersJSONBody = NewUser
+
+// CreateUsersJSONRequestBody defines body for CreateUsers for application/json ContentType.
+type CreateUsersJSONRequestBody = CreateUsersJSONBody
