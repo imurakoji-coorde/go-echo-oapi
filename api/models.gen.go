@@ -5,15 +5,15 @@ package api
 
 // NewUser defines model for NewUser.
 type NewUser struct {
-	Age  float32 `json:"age" form:"age"`
-	Name string  `json:"name" form:"name"`
+	Age  float32 `form:"age" json:"age"`
+	Name string  `form:"name" json:"name"`
 }
 
 // User defines model for user.
 type User struct {
-	Age  float32 `json:"age"`
+	Age  float32 `form:"age" json:"age"`
 	Id   int64   `json:"id"`
-	Name string  `json:"name"`
+	Name string  `form:"name" json:"name"`
 }
 
 // ListUsersParams defines parameters for ListUsers.

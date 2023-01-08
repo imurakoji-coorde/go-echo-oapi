@@ -73,5 +73,9 @@ components:
       properties:
         name:
           type: string
+          x-oapi-codegen-extra-tags:
+            form: name
         age:
           type: number
+          x-oapi-codegen-extra-tags:
+            form: age
