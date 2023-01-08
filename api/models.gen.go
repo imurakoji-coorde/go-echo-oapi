@@ -5,8 +5,8 @@ package api
 
 // NewUser defines model for NewUser.
 type NewUser struct {
-	Age  float32 `form:"age"`
-	Name string  `form:"name"`
+	Age  float32 `json:"age" form:"age"`
+	Name string  `json:"name" form:"name"`
 }
 
 // User defines model for user.
