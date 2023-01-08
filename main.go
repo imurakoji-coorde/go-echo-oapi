@@ -21,7 +21,7 @@ func (h server) ListUsers(ctx echo.Context, params api.ListUsersParams) error {
 
 // CreateUsers は ServerInterface　に定義される CreateUsers の実装
 func (h server) CreateUsers(ctx echo.Context) error {
-	b := &api.NewUser{}
+	b := &api.CreateUsersJSONBody{}
 	// b.Name = ctx.FormValue("name")
 	if err := ctx.Bind(b); err != nil {
 		return err
