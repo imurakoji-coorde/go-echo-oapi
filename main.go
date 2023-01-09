@@ -4,6 +4,7 @@ import (
 	"sample/api"
 
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 // ServerInterface の定義を満たす構造体
@@ -41,6 +42,7 @@ func (h server) CreateUsers(ctx echo.Context) error {
 func setHandler() *echo.Echo {
 	s := server{}
 	e := echo.New()
+	e.Use(middleware.CORS())
 
 	// RegisterHandlers の第2引数の型は ServerInterface なので、
 	// ServerInterface を満たした構造体を代入する
