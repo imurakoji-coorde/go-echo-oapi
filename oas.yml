@@ -2,9 +2,6 @@ openapi: "3.0.0"
 info:
   version: 1.0.0
   title: User API
-servers:
-  - url: http://localhost:8080
-    description: ローカル環境
 paths:
   /users:
     get:
@@ -40,10 +37,16 @@ paths:
       requestBody:
         required: true
         content:
-          # multipart/form-data:
-          application/json:
+          # text/plain:
+          multipart/form-data:
             schema:
-              $ref: "#/components/schemas/NewUser"
+              # $ref: "#/components/schemas/NewUser"
+              type: object
+              properties:
+                name:
+                  type: string
+                age:
+                  type: integer
       responses:
         "200":
           description: user response
@@ -71,9 +74,5 @@ components:
       properties:
         name:
           type: string
-          x-oapi-codegen-extra-tags:
-            form: name
         age:
           type: number
-          x-oapi-codegen-extra-tags:
-            form: age
