@@ -2,6 +2,9 @@ openapi: "3.0.0"
 info:
   version: 1.0.0
   title: User API
+servers:
+  - url: http://localhost:8080
+    description: ローカル環境
 paths:
   /users:
     get:
@@ -74,5 +77,9 @@ components:
       properties:
         name:
           type: string
+          x-oapi-codegen-extra-tags:
+            form: name
         age:
           type: number
+          x-oapi-codegen-extra-tags:
+            form: age
