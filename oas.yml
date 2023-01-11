@@ -41,7 +41,9 @@ paths:
         required: true
         content:
           # text/plain:
-          multipart/form-data:
+          # application/json:
+          application/x-www-form-urlencoded:
+          # multipart/form-data:
             schema:
               # $ref: "#/components/schemas/NewUser"
               type: object
